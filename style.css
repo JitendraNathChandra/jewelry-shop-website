@@ -134,9 +134,9 @@ html,body{
 }
 
 .elem img{
-    /* opacity: 0; */
-    /* display: none;
-    height: 140%; */
+    opacity: 0;
+    display: none;
+    height: 140%;
     z-index: 999;
     position: absolute;
 }
@@ -250,6 +250,9 @@ html,body{
      display: flex;
      flex-wrap: wrap;
      justify-content: space-between;
+     margin-left: 3vw;
+     margin-right: 3vw;
+     padding: .8vw;
  }
 
  .footer .column {
@@ -301,11 +304,107 @@ html,body{
     text-align: center;
  }
 
- .footer .map iframe {
+.footer .map h3{
+    text-align: left;
+}
+
+/* .footer .map a{
+    /* padding: 12px 22px;
+    border: 2px solid #fff;
+    border-radius: 0px 0px 10px 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase; */
+    /* max-width: 300px; */
+    /* width: 100%;
+    max-width: 300px;
+    height: 200px;
+    border: none; */
+
+
+    /* color: white;
+    padding: .5rem 2rem;
+    border-radius: 0px 0px 10px 10px;
+    background-color: black;
+    border: 2px solid #f40808;
+    text-align: center;    
+} */
+
+ /* .footer .map iframe {
      width: 100%;
      max-width: 300px;
      height: 200px;
      border: none;
+ } */
+
+ .map iframe.responsive-map {
+     width: 100%;
+     max-width: 900px;
+     height: 300px;
+     border: 0;
+     border-radius: 8px;
+ }
+
+ /* Styling for the STORE LOCATOR button */
+ .store-locator-btn {
+     display: inline-block;
+     /* margin-top: 15px; */
+     padding: 1vw 5vw;
+     font-size: 18px;
+     color: #ffffff;
+     background-color: black;
+     text-decoration: none;
+     border-radius: 0px 0px 10px 10px;
+     transition: background-color 0.3s ease;
+ }
+
+ .store-locator-btn:hover {
+     background-color: #1568a7;
+ }
+
+ /* Medium screens (tablets) */
+ @media (max-width: 1200px) {
+     .map iframe.responsive-map {
+         max-width: 1200px;
+         /* Reduced width for medium screens */
+         height: 350px;
+     }
+
+     .store-locator-btn {
+         padding: 1.5vw 3.5vw;
+         font-size: 16px;
+     }
+ }
+
+ /* Small screens (smartphones) */
+ @media (max-width: 768px) {
+     .map iframe.responsive-map {
+         max-width: 600px;
+         /* Further reduced width */
+         height: 300px;
+     }
+
+     .store-locator-btn {
+         padding: 1.5vw 2vw;
+         font-size: 14px;
+     }
+ }
+
+ /* Extra-small screens */
+ @media (max-width: 480px) {
+     .map iframe.responsive-map {
+         max-width: 100%;
+         /* Use full width of the container */
+         height: 250px;
+     }
+
+     .store-locator-btn {
+         padding: 8px 15px;
+         font-size: 12px;
+     }
  }
 
  .footer .social {
